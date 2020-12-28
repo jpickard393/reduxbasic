@@ -1,7 +1,8 @@
 import * as ACTION_TYPES from '../actions/action_types';
 
 const initialState = {
-    stateProp1: false
+    stateprop1: false,
+    user_text: ""
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -9,12 +10,17 @@ const rootReducer = (state = initialState, action) => {
         case ACTION_TYPES.SUCCESS:
             return {
                 ...state,
-                stateProp1: true
+                stateprop1: true
             }
         case ACTION_TYPES.FAILURE:
             return {
                 ...state,
-                stateProp1: false
+                stateprop1: false
+            }
+        case ACTION_TYPES.USER_INPUT:
+            return {
+                ...state,
+                jobRef: action.payload
             }
         default:
             return state

@@ -7,4 +7,28 @@ export const FAILURE = {
     type: ACTION_TYPES.FAILURE
 }
 
+export const success = () => {
+    return {
+        type: ACTION_TYPES.SUCCESS
+    }
+}
+
+export const failure = () => {
+    return {
+        type: ACTION_TYPES.FAILURE
+    }
+}
+
+export const user_input = (text) => {
+    return {
+        type: ACTION_TYPES.USER_INPUT,
+        payload: text
+    }
+}
+
+// export const searchByJobRef = () => {
+//     return {
+//         type: ACTION_TYPES.SEARCH_BY_JOBREF
+//     }
+// }
 
