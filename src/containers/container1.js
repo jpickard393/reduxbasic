@@ -21,6 +21,8 @@ class Container1 extends Component {
     }
 }
 
+// Called every time the store state changes.  It receives the enntire store state, 
+// and should return an object of data this component needs
 function mapStateToProps(state) {
     return {
         stateprop1: state.stateprop1,
@@ -28,6 +30,13 @@ function mapStateToProps(state) {
     }
 }
 
+/* Can be a parameter or a funnction
+If a function will be called once on component creation.  
+receives Dispatch as an argument, and should returnn an object that will use dispatch
+to dispatch actions.
+
+If an object, it will automatically dispatch its action when called.
+*/
 function mapDispatchToProps(dispatch) {
     return {
         action1: () => dispatch(ACTIONS.SUCCESS),
@@ -38,4 +47,5 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
+// Pass the component to the connect, so that it is conneted to the store.
 export default connect(mapStateToProps, mapDispatchToProps)(Container1);

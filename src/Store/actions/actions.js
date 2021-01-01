@@ -25,10 +25,3 @@ export const user_input = (text) => {
         payload: text
     }
 }
-
-// export const searchByJobRef = () => {
-//     return {
-//         type: ACTION_TYPES.SEARCH_BY_JOBREF
-//     }
-// }
-
